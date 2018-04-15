@@ -32,9 +32,13 @@
     "develop": "gatsby develop",
     "serve": "gatsby serve",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier": "prettier --write src/**/*.md src/**/*.js src/**/*.jsx src/**/*.css",
+    "prettier-watch": "onchange 'src/**/*.md' 'src/**/*.js' 'src/**/*.jsx' 'src/**/*.css' -- prettier --write {{changed}}"
   },
   "devDependencies": {
+    "@andyfangdz/prettierrc": "^4.1.1",
+    "onchange": "^3.3.0",
     "prettier": "^1.7.4"
   }
 }
